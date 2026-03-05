@@ -51,6 +51,7 @@ export async function onFileAndFolderAdd(filePath: string): Promise<void> {
       absolutePath: absolutePathNode,
       key: relativePathNode,
       type: "file",
+      extension: path.extname(fileName).slice(1),
     };
   }
 

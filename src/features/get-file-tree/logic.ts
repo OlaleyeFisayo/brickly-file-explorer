@@ -60,6 +60,7 @@ export async function getFileTree(dirPath: string): Promise<FileTreeNode[]> {
             absolutePath: absolutePathNode,
             key: relativePathNode,
             type: "file",
+            extension: path.extname(entry.name).slice(1),
           };
         }
         SearchIndex.set(node.path, node);

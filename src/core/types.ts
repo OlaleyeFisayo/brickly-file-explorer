@@ -1,5 +1,6 @@
 export type FileType = {
   type: "file";
+  extension: string;
 };
 
 export type DirectoryType = {

@@ -34,7 +34,7 @@ export default defineConfig({
       // Optional configurations
       rootPath: "./",
       respectGitIgnore: true, // automatically excludes entries from .gitignore
-      hiddenFiles: [".vscode"], // any additional files/folders to hide
+      hiddenFiles: [".git", ".vscode"], // any additional files/folders to hide
     })
   ]
 });
@@ -42,11 +42,11 @@ export default defineConfig({
 
 ### Options
 
-| Option             | Type       | Default | Description                                                                                          |
-| ------------------ | ---------- | ------- | ---------------------------------------------------------------------------------------------------- |
-| `rootPath`         | `string`   | `'./'`  | The root directory the plugin will watch and manage. Must be within the project's directory.         |
-| `hiddenFiles`      | `string[]` | `[]`    | Additional files or directories to exclude from the file tree. Merged with any `.gitignore` entries. |
-| `respectGitIgnore` | `boolean`  | `true`  | When enabled, reads `.gitignore` in the root directory and excludes its entries from the file tree.  |
+| Option             | Type       | Default               | Description                                                                                          |
+| ------------------ | ---------- | --------------------- | ---------------------------------------------------------------------------------------------------- |
+| `rootPath`         | `string`   | `'./'`                | The root directory the plugin will watch and manage. Must be within the project's directory.         |
+| `hiddenFiles`      | `string[]` | `['.git', '.vscode']` | Additional files or directories to exclude from the file tree. Merged with any `.gitignore` entries. |
+| `respectGitIgnore` | `boolean`  | `true`                | When enabled, reads `.gitignore` in the root directory and excludes its entries from the file tree.  |
 
 ## Types
 

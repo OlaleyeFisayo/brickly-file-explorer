@@ -5,7 +5,7 @@ import type { FileExplorerOptions } from "./types";
 
 export const fileExplorerOptionsDefault: FileExplorerOptions = {
   rootPath: "./",
-  hiddenFiles: [],
+  hiddenFiles: [".git", ".vscode"],
   respectGitIgnore: true,
 };
 

@@ -18,6 +18,33 @@ export async function openInIde(filePath: string): Promise<void> {
     case "vscode":
       exec(`code . "${relativePath}"`, { cwd: rootPath });
       break;
+    case "vscode-insiders":
+      exec(`code-insiders . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "cursor":
+      exec(`cursor . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "webstorm":
+      exec(`webstorm . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "intellij-idea":
+      exec(`idea . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "sublime-text":
+      exec(`subl . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "zed":
+      exec(`zed . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "atom":
+      exec(`atom . "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "vim":
+      exec(`vim "${relativePath}"`, { cwd: rootPath });
+      break;
+    case "nvim":
+      exec(`nvim "${relativePath}"`, { cwd: rootPath });
+      break;
     default:
       throw new Error(`Unsupported IDE: ${defaultIde}`);
   }
